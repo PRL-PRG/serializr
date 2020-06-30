@@ -25,7 +25,7 @@ write_table <- function(object,
         stop(message)
     }
 
-    invisible(.Call(C_serializr_write_table,
+    invisible(.Call(C_streamr_write_table,
                     object,
                     filepath,
                     truncate,

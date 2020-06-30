@@ -3,7 +3,7 @@
 #include "BinaryDataTableStream.h"
 #include "TextDataTableStream.h"
 
-namespace serializr {
+namespace streamr {
 
 DataTableStream* create_data_table(const std::string& filepath,
                                    const std::vector<std::string>& column_names,
@@ -87,4 +87,4 @@ SEXP write_data_table(SEXP r_data_frame,
     return R_NilValue;
 }
 
-} // namespace serializr
+} // namespace streamr

@@ -1,5 +1,5 @@
-#ifndef SERIALIZR_UTILITIES_H
-#define SERIALIZR_UTILITIES_H
+#ifndef STREAMR_UTILITIES_H
+#define STREAMR_UTILITIES_H
 
 #include <cstdlib>
 #include <cstdio>
@@ -8,7 +8,7 @@
 #include <Rinternals.h>
 #undef error
 
-namespace serializr {
+namespace streamr {
 
 extern const char UNIT_SEPARATOR;
 extern const char RECORD_SEPARATOR;
@@ -24,7 +24,7 @@ struct memory_block_t {
 #define failwith_impl(file, line, format, ...)     \
     do {                                           \
         fprintf(stderr,                            \
-                "serializr error [%s:%d] " format, \
+                "streamr error [%s:%d] " format, \
                 file,                              \
                 line,                              \
                 __VA_ARGS__);                      \
@@ -91,6 +91,6 @@ memory_block_t map_to_memory(const std::string& filepath);
 
 void unmap_memory(void* data, std::size_t size);
 
-} // namespace serializr
+} // namespace streamr
 
-#endif /* SERIALIZR_UTILITIES_H */
+#endif /* STREAMR_UTILITIES_H */

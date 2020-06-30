@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <utility>
 
-namespace serializr {
+namespace streamr {
 
 int parse_integer(const char* buffer, const char** end, std::size_t bytes) {
     int value = 0;
@@ -155,4 +155,4 @@ void unmap_memory(void* data, std::size_t size) {
     }
 }
 
-} // namespace serializr
+} // namespace streamr

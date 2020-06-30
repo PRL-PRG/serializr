@@ -1,5 +1,5 @@
-#ifndef SERIALIZR_ZSTD_COMPRESSION_STREAM_H
-#define SERIALIZR_ZSTD_COMPRESSION_STREAM_H
+#ifndef STREAMR_ZSTD_COMPRESSION_STREAM_H
+#define STREAMR_ZSTD_COMPRESSION_STREAM_H
 
 #include "Stream.h"
 #include <zstd.h>
@@ -17,11 +17,11 @@ class ZstdCompressionStream: public Stream {
         , compression_stream_{nullptr} {
         input_buffer_size_ = ZSTD_CStreamInSize();
         input_buffer_ =
-            static_cast<char*>(serializr::malloc_or_die(input_buffer_size_));
+            static_cast<char*>(streamr::malloc_or_die(input_buffer_size_));
 
         output_buffer_size_ = ZSTD_CStreamOutSize();
         output_buffer_ =
-            static_cast<char*>(serializr::malloc_or_die(output_buffer_size_));
+            static_cast<char*>(streamr::malloc_or_die(output_buffer_size_));
 
         compression_stream_ = ZSTD_createCStream();
         if (compression_stream_ == NULL) {
@@ -135,4 +135,4 @@ class ZstdCompressionStream: public Stream {
     ZSTD_CStream* compression_stream_;
 };
 
-#endif /* SERIALIZR_ZSTD_COMPRESSION_STREAM_H */
+#endif /* STREAMR_ZSTD_COMPRESSION_STREAM_H */

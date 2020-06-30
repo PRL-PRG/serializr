@@ -13,6 +13,6 @@ read_table <- function(filepath) {
                    comment.char = "",
                    stringsAsFactors = FALSE)
     else {
-        .Call(C_serializr_read_table, filepath, binary, compression)
+        .Call(C_streamr_read_table, filepath, binary, compression)
     }
 }

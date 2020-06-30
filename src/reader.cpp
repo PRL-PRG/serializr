@@ -3,11 +3,13 @@
 #include "BinaryDataTableStream.h"
 #include "TextDataTableStream.h"
 
-namespace serializr {
+namespace streamr {
 
 static SEXP read_uncompressed_binary_data_table(const std::string& filepath);
+
 static SEXP read_compressed_binary_data_table(const std::string& filepath,
                                               int compression_level);
+
 static SEXP read_text_data_table(const std::string& filepath,
                                  int compression_level);
 
@@ -310,7 +312,7 @@ static SEXP read_compressed_binary_data_table(const std::string& filepath,
     unmap_memory(buf, input_buffer_size);
 
     if (row_index < data_frame.row_count) {
-        Rf_error("SERIALIZR ERROR: read_compressed_binary_data_table: ",
+        Rf_error("STREAMR ERROR: read_compressed_binary_data_table: ",
                  "input file processed completely but all rows not read.");
     }
 
@@ -322,4 +324,4 @@ static SEXP read_text_data_table(const std::string& filepath,
     return R_NilValue;
 }
 
-} // namespace serializr
+} // namespace streamr

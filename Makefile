@@ -6,18 +6,18 @@ build: document
 	R CMD build .
 
 check: build
-	R CMD check serializr*tar.gz
+	R CMD check streamr*tar.gz
 
 clean:
-	-rm -f serializr*tar.gz
-	-rm -fr serializr.Rcheck
+	-rm -f streamr*tar.gz
+	-rm -fr streamr.Rcheck
 	-rm -rf src/*.o src/*.so
 
 install:
 	R CMD INSTALL .
 
 uninstall:
-	R --slave -e "remove.packages('serializr')"
+	R --slave -e "remove.packages('streamr')"
 
 document: install-devtools
 	R --slave -e "devtools::document()"

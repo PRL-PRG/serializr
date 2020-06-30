@@ -1,5 +1,5 @@
-#ifndef SERIALIZR_BUFFER_STREAM_H
-#define SERIALIZR_BUFFER_STREAM_H
+#ifndef STREAMR_BUFFER_STREAM_H
+#define STREAMR_BUFFER_STREAM_H
 
 #include "Stream.h"
 #include "utilities.h"
@@ -31,7 +31,7 @@ class BufferStream: public Stream {
     void set_capacity(std::size_t capacity) {
         std::free(buffer_);
         if ((buffer_ = static_cast<char*>(
-                 serializr::calloc_or_die(capacity, 1))) == nullptr) {
+                 streamr::calloc_or_die(capacity, 1))) == nullptr) {
             std::fprintf(
                 stderr, "unable to reserve buffer with capacity %ld", capacity);
             exit(EXIT_FAILURE);
@@ -49,7 +49,7 @@ class BufferStream: public Stream {
 
     void fill(char byte, std::size_t count) {
         char* buffer =
-            static_cast<char*>(serializr::calloc_or_die(count, sizeof(char)));
+            static_cast<char*>(streamr::calloc_or_die(count, sizeof(char)));
         for (std::size_t index = 0; index < count; ++index) {
             buffer[index] = byte;
         }
@@ -89,4 +89,4 @@ class BufferStream: public Stream {
     char* buffer_;
 };
 
-#endif /* SERIALIZR_BUFFER_STREAM_H */
+#endif /* STREAMR_BUFFER_STREAM_H */

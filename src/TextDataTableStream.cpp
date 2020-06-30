@@ -1,6 +1,6 @@
 #include "TextDataTableStream.h"
 
-namespace serializr {
+namespace streamr {
 
 const std::string TextDataTableStream::column_separator_ = "\x1f";
 
@@ -14,4 +14,4 @@ const std::string& TextDataTableStream::get_row_separator() {
     return TextDataTableStream::row_separator_;
 }
 
-} // namespace serializr
+} // namespace streamr

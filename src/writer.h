@@ -1,10 +1,10 @@
-#ifndef SERIALIZR_WRITER_HPP
-#define SERIALIZR_WRITER_HPP
+#ifndef STREAMR_WRITER_HPP
+#define STREAMR_WRITER_HPP
 
 #include <string>
 #include <Rinternals.h>
 
-namespace serializr {
+namespace streamr {
 
 SEXP write_data_table(SEXP r_data_frame,
                       const std::string& filepath,
@@ -14,4 +14,4 @@ SEXP write_data_table(SEXP r_data_frame,
 
 }
 
-#endif /* SERIALIZR_WRITER_HPP */
+#endif /* STREAMR_WRITER_HPP */

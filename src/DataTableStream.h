@@ -1,5 +1,5 @@
-#ifndef SERIALIZR_DATA_TABLE_STREAM_H
-#define SERIALIZR_DATA_TABLE_STREAM_H
+#ifndef STREAMR_DATA_TABLE_STREAM_H
+#define STREAMR_DATA_TABLE_STREAM_H
 
 #include <Rinternals.h>
 #undef length
@@ -14,7 +14,7 @@
 #include <string>
 #include <vector>
 
-namespace serializr {
+namespace streamr {
 
 class DataTableStream: public Stream {
   public:
@@ -172,6 +172,6 @@ class DataTableStream: public Stream {
     ZstdCompressionStream* zstd_compression_stream_;
 };
 
-} // namespace serializr
+} // namespace streamr
 
-#endif /* SERIALIZR_DATA_TABLE_STREAM_H */
+#endif /* STREAMR_DATA_TABLE_STREAM_H */

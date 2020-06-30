@@ -1,9 +1,9 @@
-#ifndef SERIALIZR_BINARY_DATA_TABLE_STREAM_H
-#define SERIALIZR_BINARY_DATA_TABLE_STREAM_H
+#ifndef STREAMR_BINARY_DATA_TABLE_STREAM_H
+#define STREAMR_BINARY_DATA_TABLE_STREAM_H
 
 #include "DataTableStream.h"
 
-namespace serializr {
+namespace streamr {
 
 class BinaryDataTableStream: public DataTableStream {
   public:
@@ -129,6 +129,6 @@ class BinaryDataTableStream: public DataTableStream {
 
 ;
 
-} // namespace serializr
+} // namespace streamr
 
-#endif /* SERIALIZR_BINARY_DATA_TABLE_STREAM_H */
+#endif /* STREAMR_BINARY_DATA_TABLE_STREAM_H */

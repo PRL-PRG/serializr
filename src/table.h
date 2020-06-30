@@ -1,5 +1,5 @@
-#ifndef SERIALIZR_TABLE_H
-#define SERIALIZR_TABLE_H
+#ifndef STREAMR_TABLE_H
+#define STREAMR_TABLE_H
 
 #include "DataTableStream.h"
 #include <Rinternals.h>
@@ -28,4 +28,4 @@ SEXP read_data_table(SEXP table_filepath, SEXP binary, SEXP compression_level);
 }
 #endif
 
-#endif /* SERIALIZR_TABLE_H */
+#endif /* STREAMR_TABLE_H */

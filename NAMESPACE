@@ -3,4 +3,4 @@
 export(read_table)
 export(write_table)
 importFrom(utils,read.table)
-useDynLib(serializr, .registration = TRUE, .fixes = "C_")
+useDynLib(streamr, .registration = TRUE, .fixes = "C_")

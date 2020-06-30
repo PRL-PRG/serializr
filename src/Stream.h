@@ -1,5 +1,5 @@
-#ifndef SERIALIZR_STREAM_H
-#define SERIALIZR_STREAM_H
+#ifndef STREAMR_STREAM_H
+#define STREAMR_STREAM_H
 
 #include <cstddef>
 
@@ -15,4 +15,4 @@ class Stream {
     Stream *sink_;
 };
 
-#endif /* SERIALIZR_STREAM_H */
+#endif /* STREAMR_STREAM_H */

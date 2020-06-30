@@ -1,5 +1,5 @@
-#ifndef SERIALIZR_TEXT_DATA_TABLE_STREAM_H
-#define SERIALIZR_TEXT_DATA_TABLE_STREAM_H
+#ifndef STREAMR_TEXT_DATA_TABLE_STREAM_H
+#define STREAMR_TEXT_DATA_TABLE_STREAM_H
 
 #include "DataTableStream.h"
 #include <fstream>
@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 
-namespace serializr {
+namespace streamr {
 
 class TextDataTableStream: public DataTableStream {
   public:
@@ -95,6 +95,6 @@ class TextDataTableStream: public DataTableStream {
     static const std::string row_separator_;
 };
 
-} // namespace serializr
+} // namespace streamr
 
-#endif /* SERIALIZR_TEXT_DATA_TABLE_STREAM_H */
+#endif /* STREAMR_TEXT_DATA_TABLE_STREAM_H */

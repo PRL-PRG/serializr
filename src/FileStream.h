@@ -1,5 +1,5 @@
-#ifndef SERIALIZR_FILE_STREAM_H
-#define SERIALIZR_FILE_STREAM_H
+#ifndef STREAMR_FILE_STREAM_H
+#define STREAMR_FILE_STREAM_H
 
 #include "Stream.h"
 #include <cstdio>
@@ -14,7 +14,7 @@
 #include <utility>
 #include <zstd.h>
 
-namespace serializr {
+namespace streamr {
 
 class FileStream: public Stream {
   public:
@@ -83,6 +83,6 @@ class FileStream: public Stream {
     int descriptor_;
 };
 
-} // namespace serializr
+} // namespace streamr
 
-#endif /* SERIALIZR_FILE_STREAM_H */
+#endif /* STREAMR_FILE_STREAM_H */
