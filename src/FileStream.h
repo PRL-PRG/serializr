@@ -12,7 +12,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <utility>
-#include <zstd.h>
+#include "zstd.h"
 
 namespace streamr {
 

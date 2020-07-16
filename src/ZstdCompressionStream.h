@@ -2,7 +2,7 @@
 #define STREAMR_ZSTD_COMPRESSION_STREAM_H
 
 #include "Stream.h"
-#include <zstd.h>
+#include "zstd.h"
 
 class ZstdCompressionStream: public Stream {
   public:
